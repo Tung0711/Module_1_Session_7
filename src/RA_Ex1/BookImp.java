@@ -46,10 +46,10 @@ public class BookImp {
                     book.findForBookByName(scanner);
                     break;
                 case 7:
-                    book.findBookByYear(scanner, book.indexBook);
+                    book.findBookByYear(scanner);
                     break;
                 case 8:
-                    book.findBookByAuthor(scanner, book.indexBook);
+                    book.findBookByAuthor(scanner);
                     break;
                 case 9:
                     System.out.println("Chương trình kết thúc. Xin tạm biệt!");
@@ -130,7 +130,7 @@ public class BookImp {
         }
     }
 
-    public void findBookByYear(Scanner scanner, int indexBook) {
+    public void findBookByYear(Scanner scanner) {
         System.out.println("Nhập năm xuất bản muốn thống kê số lượng sách: ");
         int yearFindBook = Integer.parseInt(scanner.nextLine());
         for (int i = 0; i < indexBook; i++) {
@@ -140,7 +140,7 @@ public class BookImp {
         }
     }
 
-    public void findBookByAuthor(Scanner scanner, int indexBook) {
+    public void findBookByAuthor(Scanner scanner) {
         System.out.println("Nhập tên tác giả muốn thống kê số lượng sách: ");
         String authorFindBook = scanner.nextLine();
         for (int i = 0; i < indexBook; i++) {

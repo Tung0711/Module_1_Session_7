@@ -42,10 +42,10 @@ public class ProductImp {
                     pro.sortProductByProfit();
                     break;
                 case 5:
-                    pro.findProductByExPrice(scanner,pro.indexProduct);
+                    pro.findProductByExPrice(scanner);
                     break;
                 case 6:
-                    pro.findForProductByName(scanner,pro.indexProduct);
+                    pro.findForProductByName(scanner);
                     break;
                 case 7:
                     break;
@@ -102,7 +102,7 @@ public class ProductImp {
         System.out.println("Sắp xếp thành công!");
     }
 
-    public void findProductByExPrice(Scanner scanner, int indexProduct) {
+    public void findProductByExPrice(Scanner scanner) {
         System.out.println("Nhập giá sản phẩm muốn thống kê số lượng: ");
         float exPriceFindByProduct = Float.parseFloat(scanner.nextLine());
         for (int i = 0; i < indexProduct; i++) {
@@ -112,7 +112,7 @@ public class ProductImp {
         }
     }
 
-    public void findForProductByName(Scanner scanner, int indexProduct) {
+    public void findForProductByName(Scanner scanner) {
         System.out.print("Nhập sản phẩm bạn muốn tìm theo tên: ");
         String nameProductFindFor = scanner.nextLine();
         System.out.println("Sản phẩm có tên bạn tìm:");
